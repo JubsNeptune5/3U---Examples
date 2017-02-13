@@ -38,19 +38,23 @@ public class Conditions {
        new Thing(KW, 0, 1);
        
        //ask if front is clear
-       while(joe.countThingsInBackpack()<5){
+       while(joe.frontIsClear()){
+           //move and turn left
            joe.move();
-           joe.turnLeft();
+           //joe.turnLeft();
+           
            //if there is something to pick up
            if(joe.canPickThing()){
            //pick up everything
            joe.pickThing();
            break;
            }
+          //did joe hit a wall
+      if(!(joe.frontIsClear())){
+          joe.turnLeft();
        }
-       joe.turnLeft();
+    
        
-       joe.canPickThing();
-       
+    }
     }
 }

@@ -2,6 +2,7 @@
 import becker.robots.City;
 import becker.robots.Direction;
 import becker.robots.Robot;
+import becker.robots.Thing;
 import becker.robots.Wall;
 
 /*
@@ -27,16 +28,29 @@ public class Conditions {
        //Crteate wall
        new Wall(KW, 1, 5, Direction.EAST);
        
-       //infinite loop
-       while(joe.frontIsClear()){
+       //things
+       new Thing(KW, 0, 1);
+       new Thing(KW, 0, 1);
+       new Thing(KW, 0, 1);
+       new Thing(KW, 0, 1);
+       new Thing(KW, 0, 1);
+       new Thing(KW, 0, 1);
+       new Thing(KW, 0, 1);
+       
+       //ask if front is clear
+       while(joe.countThingsInBackpack()<5){
            joe.move();
            joe.turnLeft();
-           while(joe.canPickThing()){
+           //if there is something to pick up
+           if(joe.canPickThing()){
+           //pick up everything
            joe.pickThing();
+           break;
            }
        }
        joe.turnLeft();
        
        joe.canPickThing();
+       
     }
 }

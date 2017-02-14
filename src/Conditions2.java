@@ -37,6 +37,7 @@ public class Conditions2 {
         new Thing(kw, 2, 3);
         new Thing(kw, 2, 3);
         new Thing(kw, 2, 3);
+       
         
         //turn on the thing labels
         kw.showThingCounts(true);
@@ -77,9 +78,12 @@ public class Conditions2 {
            joe.turnLeft();
            joe.move();
        
-      
+       }else{ 
+           //found four things
+           break;
+       }
         //if holding four things, stop
-        }
+
     }
     }
 }

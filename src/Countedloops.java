@@ -33,5 +33,12 @@ public class Countedloops {
             //counter = ++; <-- shortcut to add one
             //counter +=1; <-- another shortcut
         }
+        joe.turnAround();
+        
+        //using a for loop to count
+        //for(define a variable; condition to loop; increase variable)
+        for(int i=0; i<5; i = i +1){
+        joe.move();
+    }
     }
 }

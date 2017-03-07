@@ -16,7 +16,7 @@ public class InputOutput {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //Scanenr to get user input
+        //Scanner to get user input
         Scanner input = new Scanner(System.in);
         
         //Asking user to type in thier name 

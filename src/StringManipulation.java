@@ -18,12 +18,19 @@ public class StringManipulation {
     public static void main(String[] args) {
         //create a scanner
         Scanner input = new Scanner(System.in);
+       
         while (true) {
+            
             //get word from user
             System.out.println("Please enter a word");
             String word = input.nextLine();
 
-            if(word.equals("END")){
+            //try to find the position of an a
+            //if not founds, it is -1
+            int aPosition = word.indexOf("a");
+            
+            //ends program when "END" is typed in
+            if (word.equals("END")) {
                 break;
             }
             //covert to lowercase

@@ -26,7 +26,7 @@ public class StringManipulation {
             String word = input.nextLine();
 
             //try to find the position of an a
-            //if not founds, it is -1
+            //if not found, it is -1
             int aPosition = word.indexOf("a");
             
             //ends program when "END" is typed in
